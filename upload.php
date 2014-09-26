@@ -77,7 +77,7 @@ if ((!empty($_FILES["file"])) && ($_FILES['file']['error'] == 0))
 		}
 		else
 		{
-			if (file_exists("C:/xampp/htdocs/apps/poptart/secure/uploads/" . $random_name . "." . $extension))
+			if (file_exists("uploads/" . $random_name . "." . $extension))
 			{
 				echo "Some how file exist?";
 				die();
