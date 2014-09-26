@@ -84,7 +84,7 @@ if ((!empty($_FILES["file"])) && ($_FILES['file']['error'] == 0))
 			}
 			else
 			{
-				move_uploaded_file($_FILES["file"]["tmp_name"], "C:/xampp/htdocs/apps/poptart/secure/uploads/" . $random_name . "." . $extension);
+				move_uploaded_file($_FILES["file"]["tmp_name"], "uploads/" . $random_name . "." . $extension);
 				echo "Stored At: " . make_links_clickable("https://aurous.me/secure/uploads/" . $random_name . "." . $extension);
 				die();
 			}
