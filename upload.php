@@ -120,7 +120,7 @@ if (!empty($_POST["url"]))
 	if (((strpos($content_type, 'image/gif') !== false) || (strpos($content_type, 'image/jpeg') !== false) || (strpos($content_type, 'image/jpg') !== false) || (strpos($content_type, 'image/pjpeg') !== false) || (strpos($content_type, 'image/x-png') !== false) || (strpos($content_type, 'image/png') !== false) || strpos($content_type, 'text/plain') !== false) && ($size < 20000000) && in_array($file_extension, $allowedExts))
 	{
 		$random_name = randomString(7);
-		file_put_contents("C:/xampp/htdocs/apps/poptart/secure/uploads/" . $random_name . "." . $file_extension, file_get_contents($url));
+		file_put_contents("/uploads/" . $random_name . "." . $file_extension, file_get_contents($url));
 		echo "Stored At: " . make_links_clickable("https://aurous.me/secure/uploads/" . $random_name . "." . $file_extension);
 		die();
 	}
